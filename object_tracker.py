@@ -26,7 +26,7 @@ from deep_sort.tracker import Tracker
 from tools import generate_detections as gdet
 
 flags.DEFINE_string('framework', 'tf', '(tf, tflite, trt')
-flags.DEFINE_string('weights', './checkpoints/yolov4-416',
+flags.DEFINE_string('weights', '/content/yolov4-deepsort/tmp/1',
                     'path to weights file')
 flags.DEFINE_integer('size', 416, 'resize images to')
 flags.DEFINE_boolean('tiny', False, 'yolo or yolo-tiny')
@@ -36,7 +36,7 @@ flags.DEFINE_string('output', None, 'path to output video')
 flags.DEFINE_string('output_format', 'XVID', 'codec used in VideoWriter when saving video to file')
 flags.DEFINE_float('iou', 0.45, 'iou threshold')
 flags.DEFINE_float('score', 0.50, 'score threshold')
-flags.DEFINE_boolean('dont_show', False, 'dont show video output')
+flags.DEFINE_boolean('dont_show',True, 'dont show video output')
 flags.DEFINE_boolean('info', False, 'show detailed info of tracked objects')
 
 def main(_argv):
